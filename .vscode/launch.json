@@ -9,6 +9,14 @@
             "projectName": "demo-dice-game",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
-        }
+        },
+         {
+            "type": "java",
+            "name": "DiceGameSimulator",
+            "request": "launch",
+            "mainClass": "DiceGameSimulator",
+            "projectName": "demo-dice-game",
+            "args": [2, 3, 100]  
+        },
     ]
 }
