@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoDiceGameApplication<demo-dice-game>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.dice.game.demo_dice_game.DemoDiceGameApplication",
+            "projectName": "demo-dice-game",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
