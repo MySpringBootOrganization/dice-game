@@ -32,6 +32,14 @@ Total simulation took 0.0 seconds.
 </pre>
 <strong>Solution (2) provides 2 rest api</strong>
 <pre>
+To run the spring boot application:
+Goto the demo-dice-game folder:
+mvn clean install
+java -jar  target/demo-dice-game-0.0.1-SNAPSHOT.jar
+
+
+
+
 one can play a game by calling:
 Parameters: numOfDice - number of dice used
             targetNum - the number to be removed
