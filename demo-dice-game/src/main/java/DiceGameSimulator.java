@@ -33,7 +33,7 @@ public class DiceGameSimulator {
         }
         
         long endTime = System.currentTimeMillis();
-        double duration = (endTime - startTime) / 1000.0;
+        double duration = (endTime - startTime);
         
         // Print results
         System.out.printf("Number of simulations was %d using %d dice.\n", simulations, numOfDice);
@@ -44,7 +44,7 @@ public class DiceGameSimulator {
                                 score, percentage / 100.0, (double)scoreCounts[score]);
             }
         }
-        System.out.printf("Total simulation took %.1f seconds.\n", duration);
+        System.out.printf("Total simulation took %.1f ms.\n", duration);
     }
     
     private int playGame(int diceLeft) {

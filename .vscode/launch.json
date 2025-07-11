@@ -16,7 +16,7 @@
             "request": "launch",
             "mainClass": "DiceGameSimulator",
             "projectName": "demo-dice-game",
-            "args": [2, 3, 100]  
+            "args": [5, 3, 10000]  
         },
     ]
 }
