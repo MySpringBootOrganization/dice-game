@@ -1,0 +1,5 @@
+demo-dice-game/src/main/resources/application azure.my.properties
+demo-dice-game/src/main/resources/application-azure.yml
+demo-dice-game/src/main/resources/application-azurefull.yml
+demo-dice-game/src/main/resources/application.sample.properties
+demo-dice-game/src/main/resources/application.properties
