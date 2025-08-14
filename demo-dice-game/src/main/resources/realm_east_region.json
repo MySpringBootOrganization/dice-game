@@ -1,0 +1,112 @@
+{
+  "realm": "eastregion",
+  "enabled": true,
+  "registrationAllowed": true,
+  "resetPasswordAllowed": true,
+  "editUsernameAllowed": true,
+  "verifyEmail": true,
+  "loginWithEmailAllowed": true,
+  "sslRequired": "external",
+
+  "clients": [
+    {
+      "clientId": "account",
+      "name": "${client_account}",
+      "rootUrl": "${authBaseUrl}",
+      "baseUrl": "/realms/myrealm/account/",
+      "enabled": true,
+      "publicClient": true,
+      "protocol": "openid-connect",
+      "directAccessGrantsEnabled": false,
+      "defaultRoles": ["manage-account", "view-profile"],
+      "attributes": {
+        "post.logout.redirect.uris": "+"
+      },
+      "redirectUris": [
+        "/realms/myrealm/account/*"
+      ],
+      "webOrigins": []
+    },
+    {
+      "clientId": "account-console",
+      "name": "${client_account-console}",
+      "rootUrl": "${authBaseUrl}",
+      "baseUrl": "/realms/myrealm/account/",
+      "enabled": true,
+      "publicClient": true,
+      "protocol": "openid-connect",
+      "directAccessGrantsEnabled": false,
+      "redirectUris": [
+        "/realms/myrealm/account/*"
+      ],
+      "webOrigins": ["+"]
+    },
+    {
+      "clientId": "DiceGameApp",
+      "name": "ddicce game",
+      "rootUrl": "${authBaseUrl}",
+      "baseUrl": "/realms/myrealm/account/",
+      "enabled": true,
+      "publicClient": true,
+      "protocol": "openid-connect",
+      "directAccessGrantsEnabled": false,
+      "redirectUris": [
+        "/realms/myrealm/account/*"
+      ],
+      "webOrigins": ["+"]
+    }
+  ],
+
+  "roles": {
+    "realm": [
+      {
+        "name": "manage-account",
+        "description": "Allows user to manage their own account",
+        "composite": false,
+        "clientRole": false
+      },
+      {
+        "name": "view-profile",
+        "description": "Allows user to view their own profile",
+        "composite": false,
+        "clientRole": false
+      }
+    ],
+	"client": {
+	    "DiceGameApp": [
+		 {
+          "name": "player",
+          "description": "play game",
+          "composite": false,
+          "clientRole": true,
+          "attributes": {}
+        }
+		]
+	}
+  },
+  
+
+  "users": [
+    {
+      "username": "developer",
+      "enabled": true,
+      "emailVerified": true,
+      "email": "alice@example.com",
+      "firstName": "developer",
+      "lastName": "Wonder",
+      "realmRoles": ["manage-account", "view-profile","default-roles-eastregion"],
+       "clientRoles": {
+        "DiceGameApp": [
+          "player"
+        ]
+      },
+	  "credentials": [
+        {
+          "type": "password",
+          "value": "developer",
+          "temporary": true
+        }
+      ]
+    }
+  ]
+}
